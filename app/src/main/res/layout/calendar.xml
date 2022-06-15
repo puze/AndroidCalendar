@@ -10,11 +10,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50sp"
-        android:text="00"/>
+        android:text="0월"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+        <TextView
+            style="@style/CalendarWeek"
+            android:textColor="#FF0000"
+            android:text="일"/>
         <TextView
             style="@style/CalendarWeek"
             android:text="월"/>
@@ -34,10 +38,6 @@
             style="@style/CalendarWeek"
             android:textColor="#0000FF"
             android:text="토"/>
-        <TextView
-            style="@style/CalendarWeek"
-            android:textColor="#FF0000"
-            android:text="일"/>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/calendar_contents"

@@ -52,6 +52,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setMonth() {
-        binding.calendar.calendarMonth.text = "${calendar.get(Calendar.MONTH)}월"
+        binding.calendar.calendarMonth.text = "${calendar.get(Calendar.MONTH)+1}월"
     }
 }

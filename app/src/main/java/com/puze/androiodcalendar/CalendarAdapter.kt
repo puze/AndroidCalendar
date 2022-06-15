@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.puze.androiodcalendar.databinding.CalendarItemBinding
 
 class CalendarAdapter(private val itemList: ArrayList<CalendarItem>) :
-    RecyclerView.Adapter<CalendarAdapter.ViewHolder>() {
+    RecyclerView.Adapter<CalendarAdapter.CalendarViewHolder>() {
     val TAG = "Calendar"
 
-    inner class ViewHolder(private val binding: CalendarItemBinding) :
+    inner class CalendarViewHolder(private val binding: CalendarItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
@@ -31,13 +31,12 @@ class CalendarAdapter(private val itemList: ArrayList<CalendarItem>) :
         }
     }
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CalendarViewHolder {
         val binding = CalendarItemBinding.inflate(LayoutInflater.from(parent.context))
-        return ViewHolder(binding)
+        return CalendarViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CalendarViewHolder, position: Int) {
         holder.bind(itemList[position])
     }
 
